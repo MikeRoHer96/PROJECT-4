@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Marketing Campaign Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <h1>Marketing Campaign Predictions</h1>
+
+  <h2>Descriptive Stats</h2>
+  <div class="descriptive-stats">
+    <div class="image-row">
+      <img src="images/age_plot.png" alt="Age Plot">
+      <img src="images/education_plot.png" alt="Education Plot">
+      <img src="images/housing_plot.png" alt="Housing Plot">
+    </div>
+    <div class="image-row">
+      <img src="images/job_plot.png" alt="Job Plot">
+      <img src="images/loan_plot.png" alt="Loan Plot">
+      <img src="images/marital_plot.png" alt="Marital Status Plot">
+    </div>
+  </div>  
+
+  <h2>Selected Methods</h2>
+  <div class="model-section">
+    <div class="dropdown-group">
+
+      <!-- Logistic Regression -->
+      <div class="dropdown">
+        <label for="logistic">Logistic Regression Model</label><br/>
+        <select id="logistic" onchange="showImage(this)">
+          <option value="">Select</option>
+          <option value="Confusion_Matrix_Logistic_Regression">Confusion Matrix</option>
+          <option value="ROC_Curve_Logistic_Regression">ROC Curve</option>
+        </select>
+        <img id="Confusion_Matrix_Logistic_Regression" class="model-image" src="images/Confusion_Matrix_Logistic_Regression.png" alt="Confusion Matrix for Logistic Regression">
+        <img id="ROC_Curve_Logistic_Regression" class="model-image" src="images/ROC_Curve_Logistic_Regression.png" alt="ROC Curve for Logistic Regression">
+      </div>
+
+      <!-- Neural Network Optimization -->
+      <div class="dropdown">
+        <label for="nn-optimization">Neural Network Optimization</label><br/>
+        <select id="nn-optimization" onchange="showImage(this)">
+          <option value="">Select</option>
+          <option value="model_2_accuracy">Accuracy</option>
+          <option value="model_2_loss">Loss</option>
+        </select>
+        <img id="model_2_accuracy" class="model-image" src="images/model_2_accuracy.png" alt="Model 2 Accuracy">
+        <img id="model_2_loss" class="model-image" src="images/model_2_loss.png" alt="Model 2 Loss">
+      </div>
+
+      <!-- Neural Network -->
+      <div class="dropdown">
+        <label for="nn">Neural Network</label><br/>
+        <select id="nn" onchange="showImage(this)">
+          <option value="">Select</option>
+          <option value="model_1_accuracy">Accuracy</option>
+          <option value="model_1_loss">Loss</option>
+        </select>
+        <img id="model_1_accuracy" class="model-image" src="images/model_1_accuracy.png" alt="Model 1 Accuracy">
+        <img id="model_1_loss" class="model-image" src="images/model_1_loss.png" alt="Model 1 Loss">
+      </div>
+
+      <!-- Decision Tree -->
+      <div class="dropdown">
+        <label for="decision-tree">Decision Tree Model</label><br/>
+        <select id="decision-tree" onchange="showImage(this)">
+          <option value="">Select</option>
+          <option value="decision_tree_image">Decision Tree</option>
+        </select>
+        <img id="decision_tree_image" class="model-image" src="images/Decision_Tree.png" alt="Decision Tree">
+      </div>
+      
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
